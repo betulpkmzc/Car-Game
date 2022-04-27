@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    width: 800px;
+    height: 250px;
+    border: 1px solid green;
+    background: white;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#car {
+    position: absolute;
+    width: 61px;
+    height: 35px;
+    background: url(car.png);
+    bottom: 0;
+}
+
+.car-animate {
+    animation: car 0.5s linear;
+}
+
+#bump {
+    position: absolute;
+    width: 64px;
+    height: 23px;
+    background: url(bump.png);
+    bottom: 0;
+    left: 730px;
+}
+
+.bump-animate {
+    animation: bump 2.5s linear infinite;
+}
+
+@keyframes bump {
+    0% {
+        left: 730px;
+    }
+    100% {
+        left: -40px
+    }
+}
+
+@keyframes car {
+    0% {
+        bottom: 0px;
+    }
+    25% {
+        bottom: 75px;
+    }
+    75% {
+        bottom: 75px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
